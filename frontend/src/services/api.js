@@ -1,7 +1,11 @@
 import axios from 'axios';
 
+// In production, requests use same-origin relative '/api' paths.
+// In development, Vite server proxies '/api' to 'http://localhost:8000'.
+const BASE_URL = import.meta.env.VITE_API_URL || '/api';
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api',
+  baseURL: BASE_URL,
   timeout: 45000,
   headers: {
     'Content-Type': 'application/json',
@@ -9,7 +13,7 @@ const api = axios.create({
 });
 
 export const fetchMetadata = async () => {
-  const res = await api.get('/metadata');
+  const res = await api.get('/model-info');
   return res.data;
 };
 
