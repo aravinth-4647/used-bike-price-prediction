@@ -1,0 +1,82 @@
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.orm import Session
+from typing import Dict, Any
+
+from backend.app.database import get_db
+from backend.app.models import PredictionLog
+from backend.app.schemas import PredictionRequest, PredictionResponse, ModelMetadataResponse
+from backend.ml.predict import predict_bike_price, get_model_and_metadata
+
+router = APIRouter(tags=["Prediction"])
+
+@router.get("/metadata", response_model=ModelMetadataResponse)
+def get_metadata_endpoint():
+    """
+    Returns the current trained model metadata, available features, categories, and metrics.
+    """
+    try:
+        _, metadata = get_model_and_metadata()
+        return metadata
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to load model metadata: {str(e)}")
+
+@router.post("/predict", response_model=PredictionResponse)
+def predict_price_endpoint(request: PredictionRequest, db: Session = Depends(get_db)):
+    """
+    Receives bike features, predicts estimated selling price, and records log to database.
+    """
+    try:
+        raw_features = request.features or {}
+        result = predict_bike_price(raw_features)
+        
+        # Save to database log
+        brand_val = str(raw_features.get("brand", "")) if raw_features.get("brand") else None
+        model_val = str(raw_features.get("model", "")) if raw_features.get("model") else None
+        name_val = str(raw_features.get("bike_name", f"{brand_val or ''} {model_val or ''}".strip()))
+        
+        year_val = None
+        for yk in ["model_year", "year", "manufacturing_year"]:
+            if yk in raw_features and raw_features[yk]:
+                try:
+                    year_val = int(raw_features[yk])
+                    break
+                except (ValueError, TypeError):
+                    pass
+
+        km_val = None
+        for kk in ["kms_driven", "km_driven", "kilometers", "mileage"]:
+            if kk in raw_features and raw_features[kk]:
+                try:
+                    km_val = float(raw_features[kk])
+                    break
+                except (ValueError, TypeError):
+                    pass
+
+        log_entry = PredictionLog(
+            bike_name=name_val if name_val else "Used Bike",
+            brand=brand_val,
+            model=model_val,
+            model_year=year_val,
+            kms_driven=km_val,
+            predicted_price=result["predicted_price"],
+            price_range_low=result["price_range"]["low"],
+            price_range_high=result["price_range"]["high"],
+            confidence_score=result["confidence_score"],
+            model_used=result["model_used"],
+            input_data=raw_features
+        )
+        
+        try:
+            db.add(log_entry)
+            db.commit()
+            db.refresh(log_entry)
+            result["log_id"] = log_entry.id
+        except Exception as db_err:
+            # Continue even if DB write fails temporarily (e.g. read-only replica)
+            db.rollback()
+            result["log_id"] = None
+
+        return result
+
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Prediction failed: {str(e)}")

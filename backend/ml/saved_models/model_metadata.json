@@ -1,0 +1,699 @@
+{
+  "dataset_file": "used_bikes.csv",
+  "dataset_path": "D:\\Aravind ML project\\dataset\\used_bikes.csv",
+  "trained_at": "2026-10-07 18:28:07",
+  "total_records": 130,
+  "train_records": 104,
+  "test_records": 26,
+  "target_column": "price",
+  "target_stats": {
+    "column": "price",
+    "min": 21000.0,
+    "max": 2650000.0,
+    "mean": 256969.23,
+    "median": 116500.0,
+    "std": 401855.12
+  },
+  "features": {
+    "all": [
+      "model_year",
+      "kms_driven",
+      "power_bhp",
+      "engine_cc",
+      "mileage_kmpl",
+      "bike_name",
+      "brand",
+      "model",
+      "owner",
+      "location",
+      "fuel_type",
+      "condition"
+    ],
+    "numerical": [
+      "model_year",
+      "kms_driven",
+      "power_bhp",
+      "engine_cc",
+      "mileage_kmpl"
+    ],
+    "categorical": [
+      "bike_name",
+      "brand",
+      "model",
+      "owner",
+      "location",
+      "fuel_type",
+      "condition"
+    ],
+    "dropped": []
+  },
+  "feature_metadata": {
+    "numerical": {
+      "model_year": {
+        "min": 2014.0,
+        "max": 2024.0,
+        "mean": 2019.71,
+        "median": 2020.0,
+        "std": 2.51,
+        "default": 2020.0
+      },
+      "kms_driven": {
+        "min": 2000.0,
+        "max": 64000.0,
+        "mean": 20417.69,
+        "median": 14500.0,
+        "std": 15409.57,
+        "default": 14500.0
+      },
+      "power_bhp": {
+        "min": 5.5,
+        "max": 207.0,
+        "mean": 33.23,
+        "median": 20.4,
+        "std": 37.28,
+        "default": 20.4
+      },
+      "engine_cc": {
+        "min": 0.0,
+        "max": 1868.0,
+        "mean": 347.23,
+        "median": 224.0,
+        "std": 346.96,
+        "default": 224.0
+      },
+      "mileage_kmpl": {
+        "min": 14.0,
+        "max": 200.0,
+        "mean": 42.65,
+        "median": 36.0,
+        "std": 25.96,
+        "default": 36.0
+      }
+    },
+    "categorical": {
+      "bike_name": {
+        "options": [
+          "Royal Enfield Classic 350",
+          "Yamaha YZF R15 V3",
+          "Bajaj Pulsar NS200",
+          "KTM Duke 390",
+          "Honda CB Shine",
+          "TVS Apache RTR 160",
+          "Hero Splendor Plus",
+          "Royal Enfield Bullet 350",
+          "Yamaha MT-15",
+          "Suzuki Gixxer SF",
+          "Bajaj Avenger Cruise 220",
+          "Kawasaki Ninja 300",
+          "Royal Enfield Himalayan",
+          "Honda Activa 6G",
+          "TVS Jupiter",
+          "KTM RC 200",
+          "Harley-Davidson Street 750",
+          "Hero Glamour",
+          "Suzuki Access 125",
+          "Honda Hornet 2.0",
+          "BMW G 310 R",
+          "Royal Enfield Continental GT 650",
+          "Bajaj Dominar 400",
+          "TVS Raider 125",
+          "Yamaha FZ-S FI",
+          "Ather 450X",
+          "Ola S1 Pro",
+          "TVS iQube",
+          "Jawa 42",
+          "Triumph Street Twin",
+          "Ducati Scrambler Icon",
+          "Hero Passion Pro",
+          "Honda CB350 H'ness",
+          "KTM 250 Adventure",
+          "Royal Enfield Interceptor 650",
+          "Yamaha Aerox 155",
+          "Suzuki Burgman Street",
+          "Bajaj Platina 110",
+          "Hero HF Deluxe",
+          "Royal Enfield Meteor 350",
+          "Honda Unicorn",
+          "TVS Ronin",
+          "Kawasaki Z650",
+          "Benelli TRK 502",
+          "Hero Xpulse 200",
+          "Yamaha R3",
+          "Aprilia SR 150",
+          "Bajaj Pulsar 150",
+          "Royal Enfield Hunter 350",
+          "KTM RC 390",
+          "Honda Activa 125",
+          "Suzuki Hayabusa",
+          "BMW S 1000 RR",
+          "Kawasaki Ninja ZX-10R",
+          "Hero Splendor Pro",
+          "Yamaha FZ25",
+          "Bajaj Avenger Street 160",
+          "TVS Sport",
+          "Royal Enfield Thunderbird 350",
+          "Honda CB200X",
+          "Jawa Perak",
+          "KTM 125 Duke",
+          "Hero Xtreme 160R",
+          "Suzuki V-Strom SX",
+          "TVS Apache RR 310",
+          "Royal Enfield Bullet 500",
+          "Honda Shine 100",
+          "Bajaj CT 100",
+          "Yamaha RayZR 125",
+          "TVS Ntorq 125",
+          "Hero Super Splendor",
+          "Royal Enfield Continental GT 535",
+          "KTM 390 Adventure",
+          "Honda CB650R",
+          "Triumph Bonneville T100",
+          "Harley-Davidson Iron 883",
+          "BMW G 310 GS",
+          "Bajaj Pulsar 220F",
+          "Yamaha MT-03",
+          "Suzuki Gixxer 250",
+          "Hero Mavrick 440",
+          "Royal Enfield Scram 411",
+          "TVS Apache RTR 200 4V",
+          "Honda SP 125",
+          "Bajaj Platina 100",
+          "Hero Karizma XMR",
+          "Kawasaki Versys 650",
+          "Benelli Imperiale 400",
+          "Yamaha FZ X",
+          "Honda CB300R",
+          "Royal Enfield Super Meteor 650",
+          "KTM 200 Duke",
+          "Hero Splendor Plus XTEC",
+          "TVS Star City Plus",
+          "Bajaj Pulsar N160",
+          "Suzuki Intruder 150",
+          "Harley-Davidson X440",
+          "Triumph Speed 400",
+          "Ducati Monster 821",
+          "BMW R 1250 GS",
+          "Hero Passion XTEC",
+          "Honda Shine",
+          "Yamaha Fascino 125",
+          "Bajaj Chetak",
+          "Simple One",
+          "Ultraviolette F77",
+          "Royal Enfield Shotgun 650",
+          "Kawasaki Ninja 400",
+          "KTM 390 Duke 2024",
+          "Honda Transalp XL750",
+          "Triumph Scrambler 400X",
+          "Royal Enfield Himalayan 450",
+          "Hero Xtreme 125R",
+          "Bajaj Pulsar N250",
+          "Yamaha R15M",
+          "Suzuki V-Strom 650XT",
+          "Honda Goldwing",
+          "Ducati Panigale V2",
+          "Harley-Davidson Fat Boy",
+          "BMW R 18",
+          "Royal Enfield Bullet Electra",
+          "Yamaha Fazer",
+          "Hero Karizma ZMR",
+          "Bajaj Discover 125",
+          "TVS Victor",
+          "Honda CB Trigger",
+          "Suzuki Slingshot",
+          "Mahindra Mojo 300",
+          "UM Renegade Commando",
+          "Hyosung GT250R"
+        ],
+        "default": "Royal Enfield Classic 350",
+        "count": 130
+      },
+      "brand": {
+        "options": [
+          "Royal Enfield",
+          "Honda",
+          "Hero",
+          "Bajaj",
+          "Yamaha",
+          "TVS",
+          "Suzuki",
+          "KTM",
+          "Kawasaki",
+          "BMW",
+          "Harley-Davidson",
+          "Triumph",
+          "Ducati",
+          "Jawa",
+          "Benelli",
+          "Ather",
+          "Ola",
+          "Aprilia",
+          "Simple Energy",
+          "Ultraviolette",
+          "Mahindra",
+          "UM",
+          "Hyosung"
+        ],
+        "default": "Royal Enfield",
+        "count": 23
+      },
+      "model": {
+        "options": [
+          "Classic 350",
+          "YZF R15",
+          "Pulsar NS200",
+          "Duke 390",
+          "CB Shine",
+          "Apache RTR 160",
+          "Splendor Plus",
+          "Bullet 350",
+          "MT-15",
+          "Gixxer SF",
+          "Avenger Cruise 220",
+          "Ninja 300",
+          "Himalayan",
+          "Activa 6G",
+          "Jupiter",
+          "RC 200",
+          "Street 750",
+          "Glamour",
+          "Access 125",
+          "Hornet 2.0",
+          "G 310 R",
+          "Continental GT 650",
+          "Dominar 400",
+          "Raider 125",
+          "FZ-S FI",
+          "450X",
+          "S1 Pro",
+          "iQube",
+          "42",
+          "Street Twin",
+          "Scrambler Icon",
+          "Passion Pro",
+          "CB350",
+          "250 Adventure",
+          "Interceptor 650",
+          "Aerox 155",
+          "Burgman Street",
+          "Platina 110",
+          "HF Deluxe",
+          "Meteor 350",
+          "Unicorn",
+          "Ronin",
+          "Z650",
+          "TRK 502",
+          "Xpulse 200",
+          "R3",
+          "SR 150",
+          "Pulsar 150",
+          "Hunter 350",
+          "RC 390",
+          "Activa 125",
+          "Hayabusa",
+          "S 1000 RR",
+          "Ninja ZX-10R",
+          "Splendor Pro",
+          "FZ25",
+          "Avenger Street 160",
+          "Sport",
+          "Thunderbird 350",
+          "CB200X",
+          "Perak",
+          "125 Duke",
+          "Xtreme 160R",
+          "V-Strom SX",
+          "Apache RR 310",
+          "Bullet 500",
+          "Shine 100",
+          "CT 100",
+          "RayZR 125",
+          "Ntorq 125",
+          "Super Splendor",
+          "Continental GT 535",
+          "390 Adventure",
+          "CB650R",
+          "Bonneville T100",
+          "Iron 883",
+          "G 310 GS",
+          "Pulsar 220F",
+          "MT-03",
+          "Gixxer 250",
+          "Mavrick 440",
+          "Scram 411",
+          "Apache RTR 200 4V",
+          "SP 125",
+          "Platina 100",
+          "Karizma XMR",
+          "Versys 650",
+          "Imperiale 400",
+          "FZ X",
+          "CB300R",
+          "Super Meteor 650",
+          "200 Duke",
+          "Splendor Plus XTEC",
+          "Star City Plus",
+          "Pulsar N160",
+          "Intruder 150",
+          "X440",
+          "Speed 400",
+          "Monster 821",
+          "R 1250 GS",
+          "Passion XTEC",
+          "Shine",
+          "Fascino 125",
+          "Chetak",
+          "One",
+          "F77",
+          "Shotgun 650",
+          "Ninja 400",
+          "390 Duke",
+          "Transalp XL750",
+          "Scrambler 400X",
+          "Himalayan 450",
+          "Xtreme 125R",
+          "Pulsar N250",
+          "R15M",
+          "V-Strom 650XT",
+          "Goldwing",
+          "Panigale V2",
+          "Fat Boy",
+          "R 18",
+          "Bullet Electra",
+          "Fazer",
+          "Karizma ZMR",
+          "Discover 125",
+          "Victor",
+          "CB Trigger",
+          "Slingshot",
+          "Mojo 300",
+          "Renegade Commando",
+          "GT250R"
+        ],
+        "default": "Classic 350",
+        "count": 130
+      },
+      "owner": {
+        "options": [
+          "1st Owner",
+          "2nd Owner",
+          "3rd Owner"
+        ],
+        "default": "1st Owner",
+        "count": 3
+      },
+      "location": {
+        "options": [
+          "Delhi",
+          "Bangalore",
+          "Mumbai",
+          "Pune",
+          "Chennai",
+          "Hyderabad",
+          "Kolkata",
+          "Jaipur",
+          "Ahmedabad"
+        ],
+        "default": "Delhi",
+        "count": 9
+      },
+      "fuel_type": {
+        "options": [
+          "Petrol",
+          "Electric"
+        ],
+        "default": "Petrol",
+        "count": 2
+      },
+      "condition": {
+        "options": [
+          "Excellent",
+          "Good",
+          "Fair"
+        ],
+        "default": "Excellent",
+        "count": 3
+      }
+    }
+  },
+  "brand_model_mapping": {
+    "Aprilia": [
+      "SR 150"
+    ],
+    "Ather": [
+      "450X"
+    ],
+    "BMW": [
+      "G 310 R",
+      "S 1000 RR",
+      "G 310 GS",
+      "R 1250 GS",
+      "R 18"
+    ],
+    "Bajaj": [
+      "Pulsar NS200",
+      "Avenger Cruise 220",
+      "Dominar 400",
+      "Platina 110",
+      "Pulsar 150",
+      "Avenger Street 160",
+      "CT 100",
+      "Pulsar 220F",
+      "Platina 100",
+      "Pulsar N160",
+      "Chetak",
+      "Pulsar N250",
+      "Discover 125"
+    ],
+    "Benelli": [
+      "TRK 502",
+      "Imperiale 400"
+    ],
+    "Ducati": [
+      "Scrambler Icon",
+      "Monster 821",
+      "Panigale V2"
+    ],
+    "Harley-Davidson": [
+      "Street 750",
+      "Iron 883",
+      "X440",
+      "Fat Boy"
+    ],
+    "Hero": [
+      "Splendor Plus",
+      "Glamour",
+      "Passion Pro",
+      "HF Deluxe",
+      "Xpulse 200",
+      "Splendor Pro",
+      "Xtreme 160R",
+      "Super Splendor",
+      "Mavrick 440",
+      "Karizma XMR",
+      "Splendor Plus XTEC",
+      "Passion XTEC",
+      "Xtreme 125R",
+      "Karizma ZMR"
+    ],
+    "Honda": [
+      "CB Shine",
+      "Activa 6G",
+      "Hornet 2.0",
+      "CB350",
+      "Unicorn",
+      "Activa 125",
+      "CB200X",
+      "Shine 100",
+      "CB650R",
+      "SP 125",
+      "CB300R",
+      "Shine",
+      "Transalp XL750",
+      "Goldwing",
+      "CB Trigger"
+    ],
+    "Hyosung": [
+      "GT250R"
+    ],
+    "Jawa": [
+      "42",
+      "Perak"
+    ],
+    "KTM": [
+      "Duke 390",
+      "RC 200",
+      "250 Adventure",
+      "RC 390",
+      "125 Duke",
+      "390 Adventure",
+      "200 Duke",
+      "390 Duke"
+    ],
+    "Kawasaki": [
+      "Ninja 300",
+      "Z650",
+      "Ninja ZX-10R",
+      "Versys 650",
+      "Ninja 400"
+    ],
+    "Mahindra": [
+      "Mojo 300"
+    ],
+    "Ola": [
+      "S1 Pro"
+    ],
+    "Royal Enfield": [
+      "Classic 350",
+      "Bullet 350",
+      "Himalayan",
+      "Continental GT 650",
+      "Interceptor 650",
+      "Meteor 350",
+      "Hunter 350",
+      "Thunderbird 350",
+      "Bullet 500",
+      "Continental GT 535",
+      "Scram 411",
+      "Super Meteor 650",
+      "Shotgun 650",
+      "Himalayan 450",
+      "Bullet Electra"
+    ],
+    "Simple Energy": [
+      "One"
+    ],
+    "Suzuki": [
+      "Gixxer SF",
+      "Access 125",
+      "Burgman Street",
+      "Hayabusa",
+      "V-Strom SX",
+      "Gixxer 250",
+      "Intruder 150",
+      "V-Strom 650XT",
+      "Slingshot"
+    ],
+    "TVS": [
+      "Apache RTR 160",
+      "Jupiter",
+      "Raider 125",
+      "iQube",
+      "Ronin",
+      "Sport",
+      "Apache RR 310",
+      "Ntorq 125",
+      "Apache RTR 200 4V",
+      "Star City Plus",
+      "Victor"
+    ],
+    "Triumph": [
+      "Street Twin",
+      "Bonneville T100",
+      "Speed 400",
+      "Scrambler 400X"
+    ],
+    "UM": [
+      "Renegade Commando"
+    ],
+    "Ultraviolette": [
+      "F77"
+    ],
+    "Yamaha": [
+      "YZF R15",
+      "MT-15",
+      "FZ-S FI",
+      "Aerox 155",
+      "R3",
+      "FZ25",
+      "RayZR 125",
+      "MT-03",
+      "FZ X",
+      "Fascino 125",
+      "R15M",
+      "Fazer"
+    ]
+  },
+  "best_model": "Random Forest Regressor",
+  "metrics": {
+    "r2_score": 0.8748,
+    "mae": 27187.53,
+    "rmse": 46669.62,
+    "mape": 18.64
+  },
+  "all_model_results": {
+    "Random Forest Regressor": {
+      "r2_score": 0.8748,
+      "mae": 27187.53,
+      "rmse": 46669.62,
+      "mape": 18.64
+    },
+    "Gradient Boosting Regressor": {
+      "r2_score": 0.8573,
+      "mae": 27803.86,
+      "rmse": 49821.22,
+      "mape": 18.06
+    },
+    "Ridge Regression": {
+      "r2_score": 0.6696,
+      "mae": 60308.64,
+      "rmse": 75809.98,
+      "mape": 80.57
+    },
+    "Linear Regression": {
+      "r2_score": 0.623,
+      "mae": 63527.6,
+      "rmse": 80981.47,
+      "mape": 85.89
+    }
+  },
+  "feature_importances": [
+    {
+      "feature": "power_bhp",
+      "importance": 39.85
+    },
+    {
+      "feature": "engine_cc",
+      "importance": 28.34
+    },
+    {
+      "feature": "mileage_kmpl",
+      "importance": 24.82
+    },
+    {
+      "feature": "model",
+      "importance": 2.27
+    },
+    {
+      "feature": "bike_name",
+      "importance": 1.59
+    },
+    {
+      "feature": "brand",
+      "importance": 1.4
+    },
+    {
+      "feature": "location",
+      "importance": 0.76
+    },
+    {
+      "feature": "kms_driven",
+      "importance": 0.63
+    },
+    {
+      "feature": "model_year",
+      "importance": 0.19
+    },
+    {
+      "feature": "owner",
+      "importance": 0.11
+    },
+    {
+      "feature": "condition",
+      "importance": 0.04
+    },
+    {
+      "feature": "fuel_type",
+      "importance": 0.0
+    }
+  ]
+}

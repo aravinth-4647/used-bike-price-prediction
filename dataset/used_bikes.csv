@@ -1,0 +1,131 @@
+bike_name,brand,model,model_year,kms_driven,owner,location,power_bhp,engine_cc,mileage_kmpl,fuel_type,condition,price
+Royal Enfield Classic 350,Royal Enfield,Classic 350,2019,22000,1st Owner,Delhi,19.8,349,35.0,Petrol,Excellent,145000
+Yamaha YZF R15 V3,Yamaha,YZF R15,2020,15000,1st Owner,Mumbai,18.6,155,45.0,Petrol,Excellent,135000
+Bajaj Pulsar NS200,Bajaj,Pulsar NS200,2018,34000,2nd Owner,Bangalore,24.1,199,38.0,Petrol,Good,78000
+KTM Duke 390,KTM,Duke 390,2021,9500,1st Owner,Pune,43.5,373,28.0,Petrol,Excellent,230000
+Honda CB Shine,Honda,CB Shine,2017,45000,1st Owner,Chennai,10.2,124,55.0,Petrol,Good,42000
+TVS Apache RTR 160,TVS,Apache RTR 160,2019,28000,1st Owner,Hyderabad,15.5,159,47.0,Petrol,Good,68000
+Hero Splendor Plus,Hero,Splendor Plus,2018,40000,1st Owner,Delhi,8.0,97,65.0,Petrol,Good,38000
+Royal Enfield Bullet 350,Royal Enfield,Bullet 350,2016,52000,2nd Owner,Jaipur,19.8,346,35.0,Petrol,Fair,95000
+Yamaha MT-15,Yamaha,MT-15,2021,12000,1st Owner,Bangalore,18.5,155,48.0,Petrol,Excellent,128000
+Suzuki Gixxer SF,Suzuki,Gixxer SF,2019,26000,1st Owner,Kolkata,13.6,155,45.0,Petrol,Good,74000
+Bajaj Avenger Cruise 220,Bajaj,Avenger Cruise 220,2017,38000,2nd Owner,Mumbai,19.0,220,38.0,Petrol,Good,62000
+Kawasaki Ninja 300,Kawasaki,Ninja 300,2020,11000,1st Owner,Delhi,39.0,296,25.0,Petrol,Excellent,275000
+Royal Enfield Himalayan,Royal Enfield,Himalayan,2020,18000,1st Owner,Bangalore,24.3,411,30.0,Petrol,Excellent,175000
+Honda Activa 6G,Honda,Activa 6G,2021,14000,1st Owner,Pune,7.7,109,50.0,Petrol,Excellent,59000
+TVS Jupiter,TVS,Jupiter,2018,32000,1st Owner,Chennai,7.9,109,52.0,Petrol,Good,44000
+KTM RC 200,KTM,RC 200,2019,21000,1st Owner,Hyderabad,25.0,199,35.0,Petrol,Good,140000
+Harley-Davidson Street 750,Harley-Davidson,Street 750,2017,16000,2nd Owner,Mumbai,53.0,749,20.0,Petrol,Excellent,360000
+Hero Glamour,Hero,Glamour,2016,48000,2nd Owner,Ahmedabad,9.0,124,55.0,Petrol,Fair,32000
+Suzuki Access 125,Suzuki,Access 125,2020,17000,1st Owner,Delhi,8.7,124,52.0,Petrol,Excellent,62000
+Honda Hornet 2.0,Honda,Hornet 2.0,2021,11000,1st Owner,Bangalore,17.2,184,42.0,Petrol,Excellent,105000
+BMW G 310 R,BMW,G 310 R,2021,8000,1st Owner,Mumbai,34.0,313,30.0,Petrol,Excellent,245000
+Royal Enfield Continental GT 650,Royal Enfield,Continental GT 650,2021,9000,1st Owner,Pune,47.0,648,25.0,Petrol,Excellent,285000
+Bajaj Dominar 400,Bajaj,Dominar 400,2019,25000,1st Owner,Delhi,40.0,373,28.0,Petrol,Good,142000
+TVS Raider 125,TVS,Raider 125,2022,8500,1st Owner,Chennai,11.3,124,56.0,Petrol,Excellent,76000
+Yamaha FZ-S FI,Yamaha,FZ-S FI,2018,33000,2nd Owner,Kolkata,12.4,149,45.0,Petrol,Good,58000
+Ather 450X,Ather,450X,2022,9000,1st Owner,Bangalore,8.5,0,85.0,Electric,Excellent,108000
+Ola S1 Pro,Ola,S1 Pro,2022,11000,1st Owner,Pune,11.0,0,120.0,Electric,Good,98000
+TVS iQube,TVS,iQube,2023,6000,1st Owner,Delhi,6.0,0,100.0,Electric,Excellent,112000
+Jawa 42,Jawa,42,2020,14000,1st Owner,Mumbai,27.3,293,32.0,Petrol,Excellent,138000
+Triumph Street Twin,Triumph,Street Twin,2018,15000,2nd Owner,Delhi,65.0,900,22.0,Petrol,Excellent,520000
+Ducati Scrambler Icon,Ducati,Scrambler Icon,2019,12000,1st Owner,Bangalore,73.0,803,19.0,Petrol,Excellent,640000
+Hero Passion Pro,Hero,Passion Pro,2017,42000,2nd Owner,Jaipur,8.4,110,60.0,Petrol,Fair,34000
+Honda CB350 H'ness,Honda,CB350,2021,10000,1st Owner,Hyderabad,21.0,348,36.0,Petrol,Excellent,168000
+KTM 250 Adventure,KTM,250 Adventure,2021,16000,1st Owner,Pune,30.0,248,32.0,Petrol,Excellent,185000
+Royal Enfield Interceptor 650,Royal Enfield,Interceptor 650,2020,13000,1st Owner,Mumbai,47.0,648,25.0,Petrol,Excellent,265000
+Yamaha Aerox 155,Yamaha,Aerox 155,2022,7000,1st Owner,Chennai,15.0,155,42.0,Petrol,Excellent,122000
+Suzuki Burgman Street,Suzuki,Burgman Street,2019,27000,1st Owner,Delhi,8.7,124,48.0,Petrol,Good,64000
+Bajaj Platina 110,Bajaj,Platina 110,2019,31000,1st Owner,Ahmedabad,8.6,115,70.0,Petrol,Good,39000
+Hero HF Deluxe,Hero,HF Deluxe,2018,39000,2nd Owner,Kolkata,8.0,97,68.0,Petrol,Good,32000
+Royal Enfield Meteor 350,Royal Enfield,Meteor 350,2021,12000,1st Owner,Bangalore,20.2,349,36.0,Petrol,Excellent,172000
+Honda Unicorn,Honda,Unicorn,2018,36000,1st Owner,Mumbai,12.9,162,50.0,Petrol,Good,65000
+TVS Ronin,TVS,Ronin,2022,8000,1st Owner,Pune,20.4,225,40.0,Petrol,Excellent,135000
+Kawasaki Z650,Kawasaki,Z650,2019,14000,2nd Owner,Delhi,68.0,649,20.0,Petrol,Excellent,440000
+Benelli TRK 502,Benelli,TRK 502,2020,19000,1st Owner,Hyderabad,47.5,500,24.0,Petrol,Good,380000
+Hero Xpulse 200,Hero,Xpulse 200,2020,20000,1st Owner,Bangalore,18.1,199,38.0,Petrol,Good,98000
+Yamaha R3,Yamaha,R3,2018,22000,2nd Owner,Mumbai,42.0,321,26.0,Petrol,Good,235000
+Aprilia SR 150,Aprilia,SR 150,2018,29000,1st Owner,Chennai,10.0,154,40.0,Petrol,Good,52000
+Bajaj Pulsar 150,Bajaj,Pulsar 150,2017,46000,2nd Owner,Pune,14.0,149,48.0,Petrol,Fair,46000
+Royal Enfield Hunter 350,Royal Enfield,Hunter 350,2022,9500,1st Owner,Delhi,20.2,349,36.0,Petrol,Excellent,139000
+KTM RC 390,KTM,RC 390,2020,14000,1st Owner,Bangalore,43.5,373,27.0,Petrol,Excellent,238000
+Honda Activa 125,Honda,Activa 125,2019,25000,1st Owner,Mumbai,8.2,124,50.0,Petrol,Good,54000
+Suzuki Hayabusa,Suzuki,Hayabusa,2016,18000,2nd Owner,Delhi,197.0,1340,14.0,Petrol,Excellent,980000
+BMW S 1000 RR,BMW,S 1000 RR,2019,9000,1st Owner,Mumbai,207.0,999,15.0,Petrol,Excellent,1550000
+Kawasaki Ninja ZX-10R,Kawasaki,Ninja ZX-10R,2020,8500,1st Owner,Bangalore,203.0,998,15.0,Petrol,Excellent,1280000
+Hero Splendor Pro,Hero,Splendor Pro,2015,58000,3rd Owner,Jaipur,7.7,97,65.0,Petrol,Fair,24000
+Yamaha FZ25,Yamaha,FZ25,2019,26000,1st Owner,Hyderabad,20.8,249,38.0,Petrol,Good,89000
+Bajaj Avenger Street 160,Bajaj,Avenger Street 160,2020,18000,1st Owner,Chennai,15.0,160,45.0,Petrol,Good,72000
+TVS Sport,TVS,Sport,2017,44000,2nd Owner,Ahmedabad,8.1,109,70.0,Petrol,Fair,29000
+Royal Enfield Thunderbird 350,Royal Enfield,Thunderbird 350,2015,53000,2nd Owner,Pune,19.8,346,35.0,Petrol,Fair,78000
+Honda CB200X,Honda,CB200X,2022,9000,1st Owner,Kolkata,17.0,184,42.0,Petrol,Excellent,115000
+Jawa Perak,Jawa,Perak,2021,11000,1st Owner,Delhi,30.6,334,30.0,Petrol,Excellent,165000
+KTM 125 Duke,KTM,125 Duke,2019,24000,1st Owner,Bangalore,14.5,124,40.0,Petrol,Good,105000
+Hero Xtreme 160R,Hero,Xtreme 160R,2021,13000,1st Owner,Mumbai,15.0,163,46.0,Petrol,Excellent,82000
+Suzuki V-Strom SX,Suzuki,V-Strom SX,2022,8000,1st Owner,Pune,26.5,249,36.0,Petrol,Excellent,178000
+TVS Apache RR 310,TVS,Apache RR 310,2020,15000,1st Owner,Chennai,34.0,312,30.0,Petrol,Excellent,195000
+Royal Enfield Bullet 500,Royal Enfield,Bullet 500,2016,42000,2nd Owner,Delhi,27.2,499,30.0,Petrol,Good,115000
+Honda Shine 100,Honda,Shine 100,2023,5000,1st Owner,Jaipur,7.6,98,65.0,Petrol,Excellent,52000
+Bajaj CT 100,Bajaj,CT 100,2016,51000,2nd Owner,Hyderabad,7.7,102,75.0,Petrol,Fair,23000
+Yamaha RayZR 125,Yamaha,RayZR 125,2021,15000,1st Owner,Ahmedabad,8.2,125,58.0,Petrol,Excellent,64000
+TVS Ntorq 125,TVS,Ntorq 125,2020,19000,1st Owner,Bangalore,9.4,124,48.0,Petrol,Good,68000
+Hero Super Splendor,Hero,Super Splendor,2019,30000,1st Owner,Kolkata,10.7,124,55.0,Petrol,Good,45000
+Royal Enfield Continental GT 535,Royal Enfield,Continental GT 535,2015,38000,2nd Owner,Mumbai,29.1,535,28.0,Petrol,Good,135000
+KTM 390 Adventure,KTM,390 Adventure,2021,12000,1st Owner,Delhi,43.5,373,28.0,Petrol,Excellent,265000
+Honda CB650R,Honda,CB650R,2021,7000,1st Owner,Bangalore,87.0,649,20.0,Petrol,Excellent,690000
+Triumph Bonneville T100,Triumph,Bonneville T100,2017,17000,2nd Owner,Mumbai,55.0,900,23.0,Petrol,Excellent,560000
+Harley-Davidson Iron 883,Harley-Davidson,Iron 883,2018,14000,1st Owner,Delhi,50.0,883,18.0,Petrol,Excellent,610000
+BMW G 310 GS,BMW,G 310 GS,2020,16000,1st Owner,Pune,34.0,313,30.0,Petrol,Excellent,255000
+Bajaj Pulsar 220F,Bajaj,Pulsar 220F,2018,37000,2nd Owner,Chennai,20.4,220,38.0,Petrol,Good,67000
+Yamaha MT-03,Yamaha,MT-03,2023,4000,1st Owner,Hyderabad,42.0,321,26.0,Petrol,Excellent,395000
+Suzuki Gixxer 250,Suzuki,Gixxer 250,2021,11000,1st Owner,Kolkata,26.5,249,36.0,Petrol,Excellent,138000
+Hero Mavrick 440,Hero,Mavrick 440,2024,3000,1st Owner,Delhi,27.0,440,32.0,Petrol,Excellent,175000
+Royal Enfield Scram 411,Royal Enfield,Scram 411,2022,9000,1st Owner,Bangalore,24.3,411,32.0,Petrol,Excellent,165000
+TVS Apache RTR 200 4V,TVS,Apache RTR 200 4V,2021,14000,1st Owner,Mumbai,20.8,197,38.0,Petrol,Excellent,102000
+Honda SP 125,Honda,SP 125,2022,8000,1st Owner,Pune,10.7,124,60.0,Petrol,Excellent,69000
+Bajaj Platina 100,Bajaj,Platina 100,2017,45000,2nd Owner,Jaipur,7.9,102,72.0,Petrol,Fair,28000
+Hero Karizma XMR,Hero,Karizma XMR,2023,5000,1st Owner,Chennai,25.5,210,35.0,Petrol,Excellent,148000
+Kawasaki Versys 650,Kawasaki,Versys 650,2019,21000,2nd Owner,Delhi,66.0,649,20.0,Petrol,Good,470000
+Benelli Imperiale 400,Benelli,Imperiale 400,2020,15000,1st Owner,Bangalore,21.0,374,32.0,Petrol,Good,140000
+Yamaha FZ X,Yamaha,FZ X,2022,10000,1st Owner,Mumbai,12.4,149,45.0,Petrol,Excellent,98000
+Honda CB300R,Honda,CB300R,2022,7500,1st Owner,Pune,31.1,286,30.0,Petrol,Excellent,215000
+Royal Enfield Super Meteor 650,Royal Enfield,Super Meteor 650,2023,6000,1st Owner,Delhi,47.0,648,24.0,Petrol,Excellent,320000
+KTM 200 Duke,KTM,200 Duke,2018,31000,2nd Owner,Hyderabad,25.0,199,35.0,Petrol,Good,118000
+Hero Splendor Plus XTEC,Hero,Splendor Plus XTEC,2023,7000,1st Owner,Ahmedabad,8.0,97,65.0,Petrol,Excellent,61000
+TVS Star City Plus,TVS,Star City Plus,2018,37000,1st Owner,Kolkata,8.4,109,68.0,Petrol,Good,37000
+Bajaj Pulsar N160,Bajaj,Pulsar N160,2023,6500,1st Owner,Bangalore,16.0,164,45.0,Petrol,Excellent,108000
+Suzuki Intruder 150,Suzuki,Intruder 150,2018,30000,2nd Owner,Chennai,14.8,155,44.0,Petrol,Good,56000
+Harley-Davidson X440,Harley-Davidson,X440,2023,4500,1st Owner,Mumbai,27.0,440,35.0,Petrol,Excellent,210000
+Triumph Speed 400,Triumph,Speed 400,2023,5000,1st Owner,Delhi,40.0,398,30.0,Petrol,Excellent,205000
+Ducati Monster 821,Ducati,Monster 821,2018,13000,2nd Owner,Bangalore,109.0,821,18.0,Petrol,Excellent,720000
+BMW R 1250 GS,BMW,R 1250 GS,2021,11000,1st Owner,Mumbai,136.0,1254,16.0,Petrol,Excellent,1780000
+Hero Passion XTEC,Hero,Passion XTEC,2022,12000,1st Owner,Pune,9.0,113,60.0,Petrol,Good,53000
+Honda Shine,Honda,Shine,2019,29000,1st Owner,Hyderabad,10.6,124,55.0,Petrol,Good,52000
+Yamaha Fascino 125,Yamaha,Fascino 125,2021,14000,1st Owner,Jaipur,8.2,125,55.0,Petrol,Excellent,63000
+Bajaj Chetak,Bajaj,Chetak,2022,8000,1st Owner,Delhi,5.5,0,90.0,Electric,Excellent,92000
+Simple One,Simple Energy,One,2023,4000,1st Owner,Bangalore,11.4,0,180.0,Electric,Excellent,125000
+Ultraviolette F77,Ultraviolette,F77,2023,3500,1st Owner,Bangalore,40.0,0,200.0,Electric,Excellent,340000
+Royal Enfield Shotgun 650,Royal Enfield,Shotgun 650,2024,2500,1st Owner,Delhi,47.0,648,22.0,Petrol,Excellent,335000
+Kawasaki Ninja 400,Kawasaki,Ninja 400,2022,6000,1st Owner,Mumbai,45.0,399,25.0,Petrol,Excellent,410000
+KTM 390 Duke 2024,KTM,390 Duke,2024,2000,1st Owner,Pune,45.0,399,28.0,Petrol,Excellent,275000
+Honda Transalp XL750,Honda,Transalp XL750,2023,4000,1st Owner,Bangalore,91.0,755,22.0,Petrol,Excellent,950000
+Triumph Scrambler 400X,Triumph,Scrambler 400X,2023,4800,1st Owner,Chennai,40.0,398,28.0,Petrol,Excellent,225000
+Royal Enfield Himalayan 450,Royal Enfield,Himalayan 450,2024,3200,1st Owner,Delhi,40.0,452,28.0,Petrol,Excellent,255000
+Hero Xtreme 125R,Hero,Xtreme 125R,2024,2800,1st Owner,Mumbai,11.4,124,60.0,Petrol,Excellent,86000
+Bajaj Pulsar N250,Bajaj,Pulsar N250,2022,12000,1st Owner,Pune,24.5,249,38.0,Petrol,Good,115000
+Yamaha R15M,Yamaha,R15M,2023,6000,1st Owner,Hyderabad,18.4,155,45.0,Petrol,Excellent,158000
+Suzuki V-Strom 650XT,Suzuki,V-Strom 650XT,2020,16000,1st Owner,Bangalore,70.0,645,22.0,Petrol,Excellent,650000
+Honda Goldwing,Honda,Goldwing,2019,14000,1st Owner,Delhi,126.0,1833,14.0,Petrol,Excellent,2650000
+Ducati Panigale V2,Ducati,Panigale V2,2022,5000,1st Owner,Mumbai,155.0,955,16.0,Petrol,Excellent,1650000
+Harley-Davidson Fat Boy,Harley-Davidson,Fat Boy,2018,12000,2nd Owner,Delhi,93.0,1868,15.0,Petrol,Excellent,1450000
+BMW R 18,BMW,R 18,2021,7000,1st Owner,Bangalore,91.0,1802,17.0,Petrol,Excellent,1600000
+Royal Enfield Bullet Electra,Royal Enfield,Bullet Electra,2014,64000,3rd Owner,Jaipur,19.8,346,35.0,Petrol,Fair,62000
+Yamaha Fazer,Yamaha,Fazer,2015,55000,2nd Owner,Ahmedabad,13.8,153,42.0,Petrol,Fair,36000
+Hero Karizma ZMR,Hero,Karizma ZMR,2014,58000,3rd Owner,Pune,20.0,223,35.0,Petrol,Fair,38000
+Bajaj Discover 125,Bajaj,Discover 125,2016,49000,2nd Owner,Kolkata,11.0,124,60.0,Petrol,Fair,27000
+TVS Victor,TVS,Victor,2017,41000,2nd Owner,Chennai,9.5,109,62.0,Petrol,Fair,31000
+Honda CB Trigger,Honda,CB Trigger,2015,53000,2nd Owner,Hyderabad,14.0,149,50.0,Petrol,Fair,34000
+Suzuki Slingshot,Suzuki,Slingshot,2014,62000,3rd Owner,Delhi,8.5,124,58.0,Petrol,Fair,21000
+Mahindra Mojo 300,Mahindra,Mojo 300,2017,29000,2nd Owner,Bangalore,27.0,295,30.0,Petrol,Good,82000
+UM Renegade Commando,UM,Renegade Commando,2018,24000,2nd Owner,Mumbai,25.1,279,32.0,Petrol,Good,75000
+Hyosung GT250R,Hyosung,GT250R,2015,31000,3rd Owner,Pune,28.0,249,28.0,Petrol,Fair,85000
