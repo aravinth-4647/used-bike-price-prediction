@@ -30,9 +30,9 @@ if hasattr(sys.stderr, "reconfigure"):
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
-from backend.ml.dataset_loader import load_dataset
-from backend.ml.analyze_dataset import detect_target_column
-from backend.ml.preprocessor import identify_feature_columns, build_preprocessor_pipeline
+from ml.dataset_loader import load_dataset
+from ml.analyze_dataset import detect_target_column
+from ml.preprocessor import identify_feature_columns, build_preprocessor_pipeline
 
 MODEL_DIR = Path(__file__).resolve().parent / "model"
 SAVED_MODELS_DIR = Path(__file__).resolve().parent / "saved_models"

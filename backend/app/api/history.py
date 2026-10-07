@@ -3,9 +3,9 @@ from sqlalchemy.orm import Session
 from sqlalchemy import func
 from typing import List, Dict, Any, Optional
 
-from backend.app.database import get_db
-from backend.app.models import PredictionLog
-from backend.app.schemas import PredictionHistoryItem
+from app.database import get_db
+from app.models import PredictionLog
+from app.schemas import PredictionHistoryItem
 
 router = APIRouter(prefix="/history", tags=["History"])
 
@@ -18,7 +18,6 @@ def get_prediction_history(
 ):
     """
     Retrieves logged prediction queries, sorted by newest first.
-    Returns empty list if database is not configured.
     """
     if db is None:
         return []
@@ -30,7 +29,7 @@ def get_prediction_history(
         
         records = query.order_by(PredictionLog.created_at.desc()).offset(offset).limit(limit).all()
         return records
-    except Exception as e:
+    except Exception:
         return []
 
 @router.get("/stats")

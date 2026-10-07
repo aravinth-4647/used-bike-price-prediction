@@ -3,10 +3,10 @@ from pathlib import Path
 from fastapi import APIRouter, HTTPException, UploadFile, File, Form
 from typing import Optional, Dict, Any
 
-from backend.ml.dataset_loader import get_available_datasets, DATASET_DIR
-from backend.ml.analyze_dataset import analyze_dataset
-from backend.ml.train import train_model
-from backend.ml.predict import reload_model
+from ml.dataset_loader import get_available_datasets, DATASET_DIR
+from ml.analyze_dataset import analyze_dataset
+from ml.train import train_model
+from ml.predict import reload_model
 
 router = APIRouter(prefix="/training", tags=["Model Training & Datasets"])
 

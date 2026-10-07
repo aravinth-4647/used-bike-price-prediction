@@ -3,10 +3,10 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import Dict, Any, Optional
 
-from backend.app.database import get_db
-from backend.app.models import PredictionLog
-from backend.app.schemas import PredictionRequest, PredictionResponse, ModelMetadataResponse
-from backend.ml.predict import predict_bike_price, get_model_and_metadata
+from app.database import get_db
+from app.models import PredictionLog
+from app.schemas import PredictionRequest, PredictionResponse, ModelMetadataResponse
+from ml.predict import predict_bike_price, get_model_and_metadata
 
 logger = logging.getLogger("uvicorn.error")
 
@@ -17,7 +17,6 @@ router = APIRouter(tags=["Prediction"])
 def get_model_info_endpoint():
     """
     Returns the current trained model metadata, available features, categories, and metrics.
-    Works for both /api/model-info and /api/metadata.
     """
     try:
         _, metadata = get_model_and_metadata()
@@ -29,13 +28,12 @@ def get_model_info_endpoint():
 def predict_price_endpoint(request: PredictionRequest, db: Optional[Session] = Depends(get_db)):
     """
     Receives bike features, predicts estimated selling price, and records log to database.
-    If database logging fails or is unreachable, the prediction still succeeds safely.
     """
     try:
         raw_features = request.features or {}
         result = predict_bike_price(raw_features)
         
-        # Save to database log safely without blocking prediction if DB fails
+        # Save to database log safely without blocking prediction
         if db is not None:
             try:
                 brand_val = str(raw_features.get("brand", "")) if raw_features.get("brand") else None

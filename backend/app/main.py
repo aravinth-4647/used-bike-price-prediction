@@ -3,12 +3,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pathlib import Path
 
-from backend.app.config import settings
-from backend.app.database import init_db
-from backend.app.api.predict import router as predict_router
-from backend.app.api.history import router as history_router
-from backend.app.api.train import router as train_router
-from backend.ml.predict import get_model_and_metadata
+from app.config import settings
+from app.database import init_db
+from app.api.predict import router as predict_router
+from app.api.history import router as history_router
+from app.api.train import router as train_router
+from ml.predict import get_model_and_metadata
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):

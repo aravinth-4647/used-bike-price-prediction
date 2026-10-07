@@ -28,7 +28,7 @@ if hasattr(sys.stderr, "reconfigure"):
 # Ensure backend package can be imported
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
-from backend.ml.dataset_loader import load_dataset, get_available_datasets
+from ml.dataset_loader import load_dataset, get_available_datasets
 
 # Common target column candidates for bike price datasets
 TARGET_CANDIDATES = [
