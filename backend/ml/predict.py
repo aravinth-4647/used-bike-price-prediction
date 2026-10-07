@@ -1,6 +1,7 @@
 """
 Inference & Prediction Service for Used Bike Price Prediction
-Loads trained pipeline artifact and generates detailed price estimates and market insights.
+Loads pre-trained pipeline artifact and generates price estimates and market insights.
+Designed specifically for serverless execution (loads pre-trained model only, never retrains on request).
 """
 
 import os
@@ -11,25 +12,40 @@ import pandas as pd
 import numpy as np
 import joblib
 
-SAVED_MODELS_DIR = Path(__file__).resolve().parent / "saved_models"
-MODEL_FILE_PATH = SAVED_MODELS_DIR / "used_bike_model.joblib"
-METADATA_FILE_PATH = SAVED_MODELS_DIR / "model_metadata.json"
+ML_DIR = Path(__file__).resolve().parent
+
+# Check primary model path first, then fallback
+PRIMARY_MODEL_PATH = ML_DIR / "model" / "bike_price_pipeline.joblib"
+PRIMARY_META_PATH = ML_DIR / "model" / "model_metadata.json"
+
+FALLBACK_MODEL_PATH = ML_DIR / "saved_models" / "used_bike_model.joblib"
+FALLBACK_META_PATH = ML_DIR / "saved_models" / "model_metadata.json"
 
 _cached_model = None
 _cached_metadata = None
 
 def get_model_and_metadata():
-    """Lazy loader and cacher for model and metadata."""
+    """
+    Lazy loader and in-memory cacher for the trained model pipeline and metadata.
+    Never runs training in production/serverless environment.
+    """
     global _cached_model, _cached_metadata
     
     if _cached_model is None or _cached_metadata is None:
-        if not MODEL_FILE_PATH.exists() or not METADATA_FILE_PATH.exists():
-            # Trigger auto-training if model hasn't been created yet
-            from backend.ml.train import train_model
-            train_model()
+        if PRIMARY_MODEL_PATH.exists() and PRIMARY_META_PATH.exists():
+            model_file = PRIMARY_MODEL_PATH
+            meta_file = PRIMARY_META_PATH
+        elif FALLBACK_MODEL_PATH.exists() and FALLBACK_META_PATH.exists():
+            model_file = FALLBACK_MODEL_PATH
+            meta_file = FALLBACK_META_PATH
+        else:
+            raise FileNotFoundError(
+                f"Trained model artifact not found at '{PRIMARY_MODEL_PATH}'. "
+                f"Please run 'python backend/ml/train_model.py' locally before deploying."
+            )
             
-        _cached_model = joblib.load(MODEL_FILE_PATH)
-        with open(METADATA_FILE_PATH, "r", encoding="utf-8") as f:
+        _cached_model = joblib.load(model_file)
+        with open(meta_file, "r", encoding="utf-8") as f:
             _cached_metadata = json.load(f)
             
     return _cached_model, _cached_metadata
@@ -58,12 +74,8 @@ def calculate_depreciation_and_insights(
                 pass
                 
     age = max(0, current_year - (year_val if year_val else 2020))
-    
-    # Estimate original new price approximation
-    # Depreciates typically ~10-12% per year for bikes
     estimated_depreciation_pct = min(75, age * 8.5)
     
-    # Resale health / demand score
     brand = str(input_data.get("brand", "")).lower()
     condition = str(input_data.get("condition", "Good")).lower()
     
@@ -85,7 +97,6 @@ def calculate_depreciation_and_insights(
         
     resale_score = max(30, min(98, base_score))
     
-    # Valuation band rating
     if resale_score >= 85:
         demand_rating = "High Demand 🔥"
     elif resale_score >= 65:
@@ -109,7 +120,6 @@ def predict_bike_price(raw_input: Dict[str, Any]) -> Dict[str, Any]:
     num_meta = metadata.get("feature_metadata", {}).get("numerical", {})
     cat_meta = metadata.get("feature_metadata", {}).get("categorical", {})
     
-    # Construct cleaned row matching feature schema
     row = {}
     for col in feature_cols:
         if col in raw_input and raw_input[col] is not None and str(raw_input[col]).strip() != "":
@@ -122,7 +132,6 @@ def predict_bike_price(raw_input: Dict[str, Any]) -> Dict[str, Any]:
             else:
                 row[col] = str(val).strip()
         else:
-            # Fallback to feature default
             if col in num_meta:
                 row[col] = num_meta[col].get("default", 0.0)
             elif col in cat_meta:
@@ -132,15 +141,11 @@ def predict_bike_price(raw_input: Dict[str, Any]) -> Dict[str, Any]:
 
     df_input = pd.DataFrame([row])
     
-    # Inference
     raw_pred = float(model.predict(df_input)[0])
     
-    # Prevent unrealistic or negative prices
     target_min = metadata.get("target_stats", {}).get("min", 10000)
-    target_max = metadata.get("target_stats", {}).get("max", 5000000)
     cleaned_price = max(target_min * 0.5, raw_pred)
     
-    # Calculate confidence interval based on MAPE
     mape = metadata.get("metrics", {}).get("mape", 15.0)
     margin = cleaned_price * (mape / 100.0)
     
@@ -150,7 +155,7 @@ def predict_bike_price(raw_input: Dict[str, Any]) -> Dict[str, Any]:
     insights = calculate_depreciation_and_insights(cleaned_price, raw_input, metadata)
     
     return {
-        "predicted_price": round(cleaned_price, -2), # round to nearest 100
+        "predicted_price": round(cleaned_price, -2),
         "price_formatted": f"₹{round(cleaned_price, -2):,.0f}",
         "price_range": {
             "low": round(price_low, -2),
